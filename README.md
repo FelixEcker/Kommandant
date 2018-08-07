@@ -18,3 +18,19 @@ Art (`pip3 install art`)
 `clear` clears the terminal (executes the reset command)
 
 `exit` exits Kommandant
+
+`cat` executes the cat command just like in bash
+
+`del` deletes files / directories / directories with contents
+
+`dir` gets  directory contents of given path or current directory (if no path is included)
+
+`cmds` lists all current commands
+
+`play` plays a sound (executes afplay on macosx or pygames in game mixer on windows)
+
+`ssh` establishes an ssh connection (`ssh usr@ip`)
+
+`restart` restarts Kommandant (**Has some manor bugs**)
+
+
