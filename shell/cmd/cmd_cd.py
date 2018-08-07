@@ -4,10 +4,26 @@ from pathlib import Path
 init()
 
 def exec(cmd):
-	try:
-		if cmd[1] == "~":
-			cd(str(Path.home()))
-		else:
-			cd(cmd[1])
-	except IndexError:
-		print ("{}Error: cd: cd requires 1 argument but 0 were given!".format(Fore.LIGHTRED_EX))
+    path = ""
+
+    try:
+        for cmd in cmd: #peace the path back together
+            if not cmd == "cd":
+                path = path + " " + cmd
+
+        if path.startswith(" "):
+            path = path.lstrip()      
+
+        try:
+            if path == "~":
+                cd(str(Path.home()))
+            elif path.startswith("~"):
+                home = str(Path.home())
+                path = path.replace("~", home)
+                cd(path)
+            else:
+                cd(path)
+        except FileNotFoundError:
+            print ("{0}Error: cd: no such file or directory '{1}'".format(Fore.LIGHTRED_EX, path))
+    except IndexError:
+        print ("{}Error: cd: cd requires 1 argument but 0 were given!".format(Fore.LIGHTRED_EX))
