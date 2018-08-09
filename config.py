@@ -1,3 +1,3 @@
-usrname = "AngryGerman"
+usrname = ""
 StandardDirectory = ""
 StandardDirectoryAlias = "~"
