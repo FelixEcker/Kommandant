@@ -10,6 +10,7 @@ def exec(cmd):
 				perms = int(cmd[2])
 				try:
 					mkdir(path, perms)
+					print("Directory was created Succesfully")
 					return
 				except FileExistsError:
 					print("{}Error: mkdir: File / Directory already exists".format(Fore.LIGHTRED_EX))
@@ -20,6 +21,7 @@ def exec(cmd):
 					return
 				else:
 					mkdir(path)
+					print("Directory was created Succesfully")
 					return
 
 		except FileExistsError:
@@ -27,7 +29,6 @@ def exec(cmd):
 			return
 
 
-		print("Directory was created Succesfully")
 	except IndexError:
 		print("{}Error: mkdir: mkdir requires atleast 1 argument but 0 were given".format(Fore.LIGHTRED_EX))
 		return
