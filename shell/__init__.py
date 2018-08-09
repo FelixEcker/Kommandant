@@ -15,6 +15,7 @@ from .cmd import cmd_cmds
 from .cmd import cmd_play
 from .cmd import cmd_ssh
 from .cmd import cmd_restart
+from .cmd import cmd_mkdir
 
 commands = {
     "clear":cmd_clear,
@@ -28,7 +29,8 @@ commands = {
     "cmds":cmd_cmds,
     "play":cmd_play,
     "ssh":cmd_ssh,
-    "restart":cmd_restart
+    "restart":cmd_restart,
+    "mkdir":cmd_mkdir
 }
 
 
