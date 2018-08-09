@@ -21,10 +21,22 @@ def exec(cmd):
         if path.startswith("~"):
             path = path.replace("~", home)
 
-            for i in ls(path):
+            try:
+                dir = ls(path)
+            except FileNotFoundError:
+                print("{0}Error: dir: no such file or directory '{1}'".format(Fore.LIGHTRED_EX, path))
+                return
+
+            for i in dir:
                 print(i)
         else:
-            for i in ls(path):
+            try:
+                dir = ls(path)
+            except Exception:
+                print("{0}Error: dir: no such file or directory '{1}'".format(Fore.LIGHTRED_EX, path))
+                return
+
+            for i in dir:
                 print(i)
     else:
         for i in ls(cwd()):
