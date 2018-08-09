@@ -9,6 +9,8 @@ Colorama (`pip3 install colorama`)
 
 Art (`pip3 install art`)
 
+Pygame (`pip3 install pygame`Used for playing sounds on windows)
+
 # Commands
 
 `python3 args` executes python3 with given args
