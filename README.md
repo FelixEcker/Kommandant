@@ -1,6 +1,9 @@
 # Kommandant
 A "shell" written in python3
 
+# Installation
+Installation is really simple, just move it to where you want to have it and execute it with `python3 __main__.py` or `./__main__.py`.You also have to enter your Standard directory in the config.py file, just place the path in the Variable `StandardDirectory`
+
 # Requirements
 
 Python 3.5 or higher
@@ -9,11 +12,17 @@ Colorama (`pip3 install colorama`)
 
 Art (`pip3 install art`)
 
+Pygame (`pip3 install pygame`Used for playing sounds on windows)
+
 # Commands
 
-`python3 args` executes python3 with given args
+`python3` executes python3 with given args
+
+`python` executes python with given args
 
 `cd` changes working directory
+
+`mkdir` creates new directory
 
 `clear` clears the terminal (executes the reset command)
 
