@@ -9,5 +9,4 @@ def exec(cmd):
 		if file.startswith("cmd_"):
 			file = file.replace("cmd_", "")
 			file = file.replace(".py", "")
-			file = file.replace("python", "python3")
 			print (file)
