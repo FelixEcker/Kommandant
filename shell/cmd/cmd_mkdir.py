@@ -19,9 +19,11 @@ def exec(cmd):
 				if type(ex).__name__ == "ValueError":
 					print("{}Error: mkdir: 2nd argument needs to be an integer not a string".format(Fore.LIGHTRED_EX))
 					return
-				else:
+				elif type(ex).__name__ == "IndexError":
 					mkdir(path)
 					print("Directory was created Succesfully")
+					return
+				else:
 					return
 
 		except FileExistsError:
