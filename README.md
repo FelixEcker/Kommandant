@@ -6,7 +6,7 @@ Installation is really simple, just move it to where you want to have it and exe
 
 You'll also have to enter your Standard directory in the config.py file, just place the path in the Variable `StandardDirectory`.
 
-You can set your username in the variable usrname in the config.py file.
+You can set your username in the variable usrname in the config.py file, if you don't set it, your OS username will be used.
 
 # Requirements
 
