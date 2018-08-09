@@ -12,6 +12,7 @@ from os import system as sys
 init()
 
 running = False
+usr = ""
 
 def main():
     cmd_clear.exec("")
@@ -24,8 +25,14 @@ def main():
     
     sheu = shell.ExternalUse(config.StandardDirectory)
 
+    if len(config.usrname) > 0:
+        usr = config.usrname
+    else:
+        from getpass import getuser
+        usr = getuser()
+
     while running:
-        cmd = tf.prompt(config.usrname)
+        cmd = tf.prompt(usr)
         
         sheu.run(cmd)
 
