@@ -1,33 +1,48 @@
+from .. import utils as ut
+
 from os import system as sys
-from os import name
 from os.path import dirname, realpath, join
 from colorama import init, Fore
 init()
 
 def exec(cmd):
 	bashPath = ""
+	winPath = '"'
 	title = ""
-	orgcmd = cmd
 
 	try:
-		for cmd in cmd:
-			if not cmd == "play":
-				bashPath = bashPath + "\ " + cmd
+		for i in cmd:
+			if not i == "play":
+				bashPath = bashPath + "\ " + i
+
+		for i in cmd:
+			if not i == "play":
+				winPath = winPath + " " + i
+
+		winPath = winPath.lstrip()
+		print(winPath)
+		winPath = winPath + '"'
+
+		print(winPath)
 
 		bashPath = bashPath[2:]
 		bashPath = bashPath.replace("(", "\(")
 		bashPath = bashPath.replace(")", "\)")
-
-		print(bashPath)
 		
-		for cmd in orgcmd:
-			if not cmd == "play":
-				title = title + " " + cmd
+		for i in cmd:
+			if not i == "play":
+				title = title + " " + i
 
 		title = title.lstrip()
 
 		print("{0}Now playing: {1}".format(Fore.MAGENTA, title))
-		sys("afplay {0} > {1}".format(bashPath, str(join(dirname(realpath(__file__)), "../stdout.txt"))) if not name == "nt" else alt(title))
+
+		if ut.osname() == "OS X":
+			sys("afplay {}".format(bashPath))
+		elif ut.osname() == "Linux":
+			sys("aplay {}".format(bashPath))
+		elif ut.osname() == "Windows":
+			alt(winPath)
 	except IndexError:
 		print("{}Error: play: play takes 1 argument but 0 were given".format(Fore.LIGHTRED_EX))
 

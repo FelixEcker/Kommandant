@@ -7,13 +7,13 @@ def exec(cmd):
 
 	try:
 		for Arg in cmd:
-			if not Arg == "python3":
+			if not Arg == "python":
 				args = args + Arg + " "
 		
 		try:
-			sys("python3 {}".format(args))
-		except Exception:
-			print ("{}Error: An unknown error occured whilst executing script!".format(Fore.LIGHTRED_EX))
+			sys("python {}".format(args))
+		except OSError:
+			print("{}Error: python: An unknown Exception occured whilst executing command!".format(Fore.LIGHTRED_EX))
 	except IndexError:
 		print ("executing python3 interpreter!")
 		sys("python3")

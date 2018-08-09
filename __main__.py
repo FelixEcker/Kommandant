@@ -21,7 +21,9 @@ def main():
     print ("Copyright (C) 2018 Felix Eckert\n\n{}".format(Fore.RESET))
 
     running = True
+    
     sheu = shell.ExternalUse(config.StandardDirectory)
+
     while running:
         cmd = tf.prompt(config.usrname)
         

@@ -29,7 +29,3 @@ def exec(cmd):
     else:
         for i in ls(cwd()):
             print(i)
-
-
-def err():
-    raise OSError 
