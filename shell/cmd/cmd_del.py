@@ -21,7 +21,7 @@ def exec(cmd):
             if os.path.isfile(path):
                 os.remove(path)
             elif os.path.isdir(path):
-                shutil.rmtree(path)
+                rmtree(path)
             else:
                 print("{}Error: del: this file / directory doesn't exist".format(Fore.LIGHTRED_EX))
 
