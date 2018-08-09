@@ -1,6 +1,9 @@
 # Kommandant
 A "shell" written in python3
 
+# Installation
+Installation is really simple, just move it to where you want to have it and execute it with `python3 __main__.py` or `./__main__.py`.You also have to enter your Standard directory in the config.py file, just place the path in the Variable `StandardDirectory`
+
 # Requirements
 
 Python 3.5 or higher
