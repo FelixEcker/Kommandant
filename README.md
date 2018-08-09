@@ -16,9 +16,13 @@ Pygame (`pip3 install pygame`Used for playing sounds on windows)
 
 # Commands
 
-`python3 args` executes python3 with given args
+`python3` executes python3 with given args
+
+`python` executes python with given args
 
 `cd` changes working directory
+
+`mkdir` creates new directory
 
 `clear` clears the terminal (executes the reset command)
 
