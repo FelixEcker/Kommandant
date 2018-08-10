@@ -13,23 +13,30 @@ init()
 
 running = False
 usr = ""
+sd = ""
 
 def main():
     cmd_clear.exec("")
     print (text2art("Kommandant",font="speed",chr_ignore=False))
-    print ("{}https://www.github.com/".format(Fore.MAGENTA))
+    print ("{}https://www.github.com/FelixEcker/Kommandant".format(Fore.MAGENTA))
     print ("{}Version 1.0.0".format(Fore.LIGHTGREEN_EX))
     print ("Copyright (C) 2018 Felix Eckert\n\n{}".format(Fore.RESET))
 
     running = True
-    
-    sheu = shell.ExternalUse(config.StandardDirectory)
 
     if len(config.usrname) > 0:
         usr = config.usrname
     else:
         from getpass import getuser
         usr = getuser()
+
+    if len(config.StandardDirectory) > 0:
+        sd = config.StandardDirectory
+    else:
+        from pathlib import Path
+        sd = str(Path.home())
+
+    sheu = shell.ExternalUse(sd)
 
     while running:
         cmd = tf.prompt(usr)
