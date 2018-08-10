@@ -32,7 +32,7 @@ Pygame (`pip3 install pygame`Used for playing sounds on windows)
 
 `mv` moves given file / dir
 
-`clear` clears the terminal (executes the reset command)
+`clear` clears the terminal
 
 `exit` exits Kommandant
 
@@ -48,6 +48,6 @@ Pygame (`pip3 install pygame`Used for playing sounds on windows)
 
 `ssh` establishes an ssh connection (`ssh usr@ip`)
 
-`restart` restarts Kommandant (**Has some manor bugs**)
+`restart` restarts Kommandant (**Has some major bugs**)
 
 
