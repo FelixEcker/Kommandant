@@ -7,7 +7,7 @@ init()
 
 def exec(cmd):
 	bashPath = ""
-	winPath = '"'
+	winPath = ''
 	title = ""
 
 	try:
@@ -20,8 +20,6 @@ def exec(cmd):
 				winPath = winPath + " " + i
 
 		winPath = winPath.lstrip()
-		print(winPath)
-		winPath = winPath + '"'
 
 		print(winPath)
 
