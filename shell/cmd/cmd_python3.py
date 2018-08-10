@@ -52,7 +52,7 @@ def exec(cmd):
 		try:
 			sys("python3 {0} {1}".format(bashPath, args) if ut.osname() == "OS X" or ut.osname() == "Linux" else "python3 {0} {1}".format(winPath, args))
 		except Exception:
-			print ("{}Error: An unknown error occured whilst executing script!".format(Fore.LIGHTRED_EX))
+			print("{}Error: An unknown error occured whilst executing script!".format(Fore.LIGHTRED_EX))
 	except IndexError:
-		print ("executing python3 interpreter!")
+		print("executing python3 interpreter!")
 		sys("python3")
