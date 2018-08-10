@@ -17,6 +17,7 @@ from .cmd import cmd_ssh
 from .cmd import cmd_restart
 from .cmd import cmd_mkdir
 from .cmd import cmd_mv
+from .cmd import cmd_nano
 
 commands = {
     "clear":cmd_clear,
@@ -32,7 +33,8 @@ commands = {
     "ssh":cmd_ssh,
     "restart":cmd_restart,
     "mkdir":cmd_mkdir,
-    "mv":cmd_mv
+    "mv":cmd_mv,
+    "nano":cmd_nano
 }
 
 

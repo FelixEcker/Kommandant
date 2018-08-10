@@ -20,6 +20,8 @@ Pygame (`pip3 install pygame`Used for playing sounds on windows)
 
 # Commands
 
+`nano` executes nano (Also on windows, check it out [https://www.nano-editor.org/dist/win32-support/](here))
+
 `python3` executes python3 with given args
 
 `python` executes python with given args
