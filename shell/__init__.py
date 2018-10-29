@@ -1,3 +1,9 @@
+#Koshell for Kommandant version 1.0.2
+#Copyright (c) 2018 Felix Eckert
+#
+#This is a modified version of the original Koshell
+#for Kommandant, visit the original at https://github.com/FelixEcker/Koshell
+
 from colorama import *
 init()
 
@@ -40,8 +46,11 @@ commands = {
 
 class ExternalUse:
     def __init__(self, sd):
+        print("shell/INIT=>ExternalUse=>__init__():: Starting shell preparation...")
+        print("shell/INIT=>ExternalUse=>__init__():: Changin working directory to {}".format("VAR__sd::"+sd))
         self.standardDir = sd
         cd(sd)
+        print("shell/INIT=>ExternalUse=>__init__():: All shell preparation done! returning to function preparation()")
 
 
     def run(self, cmd):
