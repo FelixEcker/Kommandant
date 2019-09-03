@@ -57,7 +57,7 @@ class ExternalUse:
         cmd = cmd.split()
         if len(cmd) > 0:
             if cmd[0] in commands:
-                commands.get(cmd[0]).exec(cmd)
+                commands.get(cmd[0]).exec(cmd))
             else:
                 print("{0}Kommandant Shell: {1}: command not found".format(Fore.LIGHTRED_EX, cmd[0]))
         else:
